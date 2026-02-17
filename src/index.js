@@ -8,7 +8,11 @@ import {
   createRequestExecutor,
 } from "./utils/requestExecutor.js";
 
+import { contactProperties, dealProperties } from "./utils/helper.util.js"; // Helper Functions
+
 export {
+  dealProperties,
+  contactProperties,
   logger,
   getHSAxios,
   hubspotClient,

@@ -6,6 +6,7 @@ dotenv.config({
 import { app } from "./src/app.js";
 import { logger } from "./src/index.js";
 import { getHubspotClient } from "./src/configs/hubspot.config.js";
+import { syncHubspotDealToCentralReachClient } from "./src/services/hubspot.service.js";
 
 // Start the server, For CI/CD deployments remove deploy.yml from .gitignore
 // npm i express axios node-cron winston winston-daily-rotate-file dotenv @mohammadsaddam-dev/hubspot-toolkit
@@ -28,6 +29,7 @@ function serverInit() {
 }
 
 serverInit();
+syncHubspotDealToCentralReachClient();
 
 async function init() {
   try {
